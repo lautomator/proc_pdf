@@ -1,0 +1,61 @@
+---
+FieldType: Text
+FieldName: edition_date
+FieldFlags: 4194304
+FieldValue: April 28, 2014 Edition
+FieldValueDefault: enter date
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: head_01
+FieldFlags: 37752832
+FieldValue: Sed ut perspiciatus unde
+FieldValueDefault: heading 1
+FieldJustification: Left
+FieldStyleDefault: font: Helvetica,sans-serif 12.0pt; text-align:left; color:#808080 
+FieldValueRichText: <?xml version="1.0"?><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:10.1.9" xfa:spec="2.0.2"  style="font-size:12.0pt;text-align:left;color:#808080;font-weight:normal;font-style:normal;font-family:Helvetica,sans-serif;font-stretch:normal"><p>Sed ut perspiciatus unde</p></body>
+---
+FieldType: Text
+FieldName: article_01
+FieldFlags: 37752832
+FieldValue: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu tortor leo. Proin ut interdum erat, id tempor ligula. Integer rhoncus eros nec quam tempor hendrerit. Vestibulum ultricies, mi id posuere scelerisque, dui ipsum tempus leo, eget dictum tellus felis eu felis. Fusce sem lectus, venenatis vitae sollicitudin eu, ornare eu massa. Nullam molestie consequat est, id mollis velit convallis vel. Quisque at lorem felis. Sed id nisl at libero tempor sollicitudin. Aenean sit amet sollicitudin libero, sed egestas lectus. Phasellus non lobortis massa, vel cursus elit.
+FieldValueDefault: article 1
+FieldJustification: Left
+FieldStyleDefault: font: Helvetica,sans-serif 12.0pt; text-align:left; color:#808080 
+FieldValueRichText: <?xml version="1.0"?><body xfa:APIVersion="Acroform:2.7.0.0" xfa:spec="2.1" xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;font-family:Arial;font-size:11pt;color:#000000"><span dir="ltr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu tortor leo. Proin ut interdum erat, id tempor ligula. Integer rhoncus eros nec quam tempor hendrerit. Vestibulum ultricies, mi id posuere scelerisque, dui ipsum tempus leo, eget dictum tellus felis eu felis. Fusce sem lectus, venenatis vitae sollicitudin eu, ornare eu massa. Nullam molestie consequat est, id mollis velit convallis vel. Quisque at lorem felis. Sed id nisl at libero tempor sollicitudin. Aenean sit amet sollicitudin libero, sed egestas lectus. Phasellus non lobortis massa, vel cursus elit.</span></p></body>
+---
+FieldType: Text
+FieldName: head_02
+FieldFlags: 37752832
+FieldValue: Omnis istenatus error sit
+FieldValueDefault: heading 2
+FieldJustification: Left
+FieldStyleDefault: font: Helvetica,sans-serif 12.0pt; text-align:left; color:#808080 
+FieldValueRichText: <?xml version="1.0"?><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:10.1.9" xfa:spec="2.0.2"  style="font-size:12.0pt;text-align:left;color:#808080;font-weight:normal;font-style:normal;font-family:Helvetica,sans-serif;font-stretch:normal"><p>Omnis istenatus error sit</p></body>
+---
+FieldType: Text
+FieldName: article_02
+FieldFlags: 37752832
+FieldValue: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu tortor leo. Proin ut interdum erat, id tempor ligula. Integer rhoncus eros nec quam tempor hendrerit. Vestibulum ultricies, mi id posuere scelerisque, dui ipsum tempus leo, eget dictum tellus felis eu felis. Fusce sem lectus, venenatis vitae sollicitudin eu, ornare eu massa. Nullam molestie consequat est, id mollis velit convallis vel. Quisque at lorem felis. Sed id nisl at libero tempor sollicitudin. Aenean sit amet sollicitudin libero, sed egestas lectus. Phasellus non lobortis massa, vel cursus elit.
+FieldValueDefault: article 2
+FieldJustification: Left
+FieldStyleDefault: font: Helvetica,sans-serif 12.0pt; text-align:left; color:#808080 
+FieldValueRichText: <?xml version="1.0"?><body xfa:APIVersion="Acroform:2.7.0.0" xfa:spec="2.1" xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;font-family:Arial;font-size:11pt;color:#000000"><span dir="ltr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu tortor leo. Proin ut interdum erat, id tempor ligula. Integer rhoncus eros nec quam tempor hendrerit. Vestibulum ultricies, mi id posuere scelerisque, dui ipsum tempus leo, eget dictum tellus felis eu felis. Fusce sem lectus, venenatis vitae sollicitudin eu, ornare eu massa. Nullam molestie consequat est, id mollis velit convallis vel. Quisque at lorem felis. Sed id nisl at libero tempor sollicitudin. Aenean sit amet sollicitudin libero, sed egestas lectus. Phasellus non lobortis massa, vel cursus elit.</span></p></body>
+---
+FieldType: Text
+FieldName: head_03
+FieldFlags: 37752832
+FieldValue: Voluptatem accusanrium
+FieldValueDefault: heading 3
+FieldJustification: Left
+FieldStyleDefault: font: Helvetica,sans-serif 12.0pt; text-align:left; color:#808080 
+FieldValueRichText: <?xml version="1.0"?><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:10.1.9" xfa:spec="2.0.2"  style="font-size:12.0pt;text-align:left;color:#808080;font-weight:normal;font-style:normal;font-family:Helvetica,sans-serif;font-stretch:normal"><p>Voluptatem accusanrium</p></body>
+---
+FieldType: Text
+FieldName: article_03
+FieldFlags: 37752832
+FieldValue: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu tortor leo. Proin ut interdum erat, id tempor ligula. Integer rhoncus eros nec quam tempor hendrerit. Vestibulum ultricies, mi id posuere scelerisque, dui ipsum tempus leo, eget dictum tellus felis eu felis. Fusce sem lectus, venenatis vitae sollicitudin eu, ornare eu massa. Nullam molestie consequat est, id mollis velit convallis vel. Quisque at lorem felis. Sed id nisl at libero tempor sollicitudin. Aenean sit amet sollicitudin libero, sed egestas lectus. Phasellus non lobortis massa, vel cursus elit.
+FieldValueDefault: article 3
+FieldJustification: Left
+FieldStyleDefault: font: Helvetica,sans-serif 12.0pt; text-align:left; color:#808080 
+FieldValueRichText: <?xml version="1.0"?><body xfa:APIVersion="Acroform:2.7.0.0" xfa:spec="2.1" xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p dir="ltr" style="margin-top:0pt;margin-bottom:0pt;font-family:Arial;font-size:11pt;color:#000000"><span dir="ltr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu tortor leo. Proin ut interdum erat, id tempor ligula. Integer rhoncus eros nec quam tempor hendrerit. Vestibulum ultricies, mi id posuere scelerisque, dui ipsum tempus leo, eget dictum tellus felis eu felis. Fusce sem lectus, venenatis vitae sollicitudin eu, ornare eu massa. Nullam molestie consequat est, id mollis velit convallis vel. Quisque at lorem felis. Sed id nisl at libero tempor sollicitudin. Aenean sit amet sollicitudin libero, sed egestas lectus. Phasellus non lobortis massa, vel cursus elit.</span></p></body>

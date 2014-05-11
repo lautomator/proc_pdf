@@ -5,7 +5,7 @@
 */
 
 # set the value of the maximum value of the upload in bytes
-$max = 151200;
+$max = 26214400; // 25 mb
 
 # move the file out of its temp location to another location
 if (isset($_POST['upload']))
@@ -16,9 +16,8 @@ if (isset($_POST['upload']))
 	require_once('./classes/Upload.php');
 	try
 	{
-		$upload = new Ps2_Upload($destination);
+		$upload = new Upload($destination);
 		$upload->setMaxSize($max);
-		$upload->addPermittedTypes(array('application/pdf'));
 		$upload->move(true);
 		$result = $upload->getMessages();	
 	}
@@ -39,27 +38,34 @@ if (isset($_POST['upload']))
 </head>
 <body>
 	<div id="page">
-		<form action="" method="post" enctype="multipart/form-data" id="uploadImage">
-		<p>
-			<label for="image">Upload PDF:</label>
-			<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max; ?>">
-			<input type="file" name="image[]" id="image" multiple>
-			<br><br>
-			<input type="submit" name="upload" id="upload" value="Upload" >
-		</p>
+		<form action="" method="post" 
+		enctype="multipart/form-data" id="uploadImage">
+			<p>
+				<label for="image"><strong>&#10112;</strong> Upload PDF:</label>
+				<input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max; ?>">
+				<input type="file" name="image[]" id="image" multiple>
+				<br><br>
+				<input type="submit" name="upload" id="upload" value="Upload">
+			</p>
 
 			<?php
-		# return messages
-		if (isset($result))
-		{
-			echo '<ul>';
-			foreach ($result as $message)
+			# return messages
+			if (isset($result))
 			{
-				echo "<p><li>$message</li></p>";
+				foreach ($result as $message)
+				{
+					echo "<p><em>$message</em></p>";
+				}
 			}
-			echo '</ul>';
-		}
-		?>
+			?>
+			<p class="hrule"></p>
+			
+			<p>
+				<label><strong>&#10113;</strong> Process PDF:</label>
+				<input type="submit" name="process" id="process" 
+					value="Process">
+			</p>
+
 		</form>
 	</div>
 </body>

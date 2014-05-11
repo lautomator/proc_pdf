@@ -3,8 +3,6 @@
 *
 {
 	margin: 0;
-	padding: 0;
-	border: 0;
 	background-repeat: no-repeat;
 	text-decoration: none;
 	font-family: sans-serif;
@@ -24,4 +22,8 @@
 p
 {
 	margin-bottom: 25px;
+}
+.hrule
+{
+	border-bottom: 1px solid #8585AD;
 }

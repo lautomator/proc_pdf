@@ -4,21 +4,14 @@
 //namespace Ps2;
 
 # class for uploading files
-class Ps2_Upload
+class Upload
 {
 	# data fields
 	protected $_uploaded = array();
 	protected $_destination;
 	protected $_max = 151200;
 	protected $_messages = array();
-	protected $_permitted = array('image/gif', 
-                                    'image/jpeg', 
-                                    'image/pjpeg', 
-                                    'image/png',
-                                    'application/pdf',
-                                    'text/plain',
-                                    'text/rtf',
-                                    'application/msword');
+	protected $_permitted = array('application/pdf');
 	protected $_renamed = false;
 
 	# constructor for the class
@@ -285,5 +278,5 @@ class Ps2_Upload
 	}
 	
 # ------------------------------------------------------------------
-# end of Ps2_Upload class
+# end of Upload class
 }

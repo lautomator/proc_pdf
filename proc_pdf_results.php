@@ -1,5 +1,15 @@
 <?php 
-require_once('./includes/process_pdf_fields.inc.php');
+if (file_exists('./processed/test.txt'))
+{
+	require_once('./includes/process_pdf_fields.inc.php');
+	$go_ahead = true;
+}
+else
+{
+	$errors = array();
+	$go_ahead = false;
+}
+
 
 ?>
 
@@ -13,7 +23,15 @@ require_once('./includes/process_pdf_fields.inc.php');
 <body>
 	<div id="page">
 		<!--// PDF field names and field values: //-->
-		<?php create_articles($pdf_data); ?>
+		<?php
+		if ($go_ahead)
+		{
+			create_articles($pdf_data);
+		}
+
+		 
+
+		?>
 	</div>
 </body>
 </html>

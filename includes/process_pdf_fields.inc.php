@@ -4,40 +4,20 @@
 	from a PDF and passes that information to
 	an HTML template. The PDF is such that it 
 	contains fields; the filled fields are
-	dumped to a text file. This script is 
-	specifically looking for the the FieldName
-	and FieldValue properties from the data
-	dump. Those fields are specific to the 
-	template and values will be used to populate
-	the corresponding areas of the HTML template. 
+	dumped to a text file using a separate 
+	script. This script is specifically looking 
+	for the the FieldName and FieldValue properties 
+	from the data dump. Those fields are specific 
+	to the template and values will be used to 
+	populate the corresponding areas of the HTML 
+	template. 
 
 	Author: John Merigliano | April 2014 */
 
 /*	============================================ */
 
-// 	Dump the data from the uploaded PDF into a text file.
-/*
-// Sanitize the input.
-$args = escapeshellargs($user_file_for_upload);
-try
-{
-	$source = system("pdftk user_pdf.pdf dump_data_utf8 output source.txt", 
-	$complete);
-}
-catch
-{
-	
-}
-
-if (isset($complete))
-{
-	echo $complete . '<br>';
-}
-*/
-
-
 // 	Open the text file.
-$src = file('./processed/test.txt');
+$src = file('./processed/source.txt');
 
 /*	Match specific field keys so that we can
 	extract the data from those fields only. */
@@ -82,5 +62,3 @@ function create_articles($pdf_data)
 		next($pdf_data);
 	}
 }
-
-?>

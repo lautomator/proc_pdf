@@ -1,7 +1,7 @@
 <?php
 
 // Class for uploading files specific to this proc_pdf.
-class Upload
+class Upload_proc_pdf
 {
 	// Data fields:
 	protected $_uploaded = array();
@@ -43,6 +43,7 @@ class Upload
 			$this->processFile($field['name'], $field['error'], $field['size'], 
 				$field['type'], $field['tmp_name'], $overwrite);
 		}
+
 	}
 	
 	// return $_messages
@@ -96,7 +97,7 @@ class Upload
 		$this->_max = (int) $num;
 	}
 
-	// process the file
+	// Process the file upload.
 	protected function processFile($filename, $error, $size, $type,
 		$tmp_name, $overwrite)
 	{
@@ -118,18 +119,14 @@ class Upload
 				// determine if a successful upload has occured
 				if ($success)
 				{
-					$message = $filename . ' uploaded successfully';
-					if ($this->_renamed)
-					{
-						$message .= " and renamed $name";
-					}
+					$message = $filename . ' uploaded successfully.';
 					$this->_messages[] = $message;
 				} 
 
 			}
 				else
 				{
-					$this->_messages[] = 'Could not upload ' . $filename;
+					$this->_messages[] = 'Could not upload ' . $filename . '.';
 				}	
 		}	
 	}
@@ -148,7 +145,7 @@ class Upload
 		{
 			if (!in_array($type, $valid))
 			{
-				throw new Exception("$type is not a permitted file type");
+				throw new Exception("$type is not a permitted file type.");
 			}
 		}
 	}
@@ -226,48 +223,25 @@ class Upload
 		}
 	}
 
+
 	// Rename the file, as it is specific to this application.
 	protected function checkName($name, $overwrite)
 	{
-		# replace any spaces with an underscore
-		$nospaces = str_replace(' ', '_', $name);
-		# determine if there are spaces or not
-		if ($nospaces != $name)
-		{
-			$this->_renamed = true;
-		}
-			# determine if overwriting is being attempted
+		$this->_renamed = true;
+		$newname = 'source.pdf';
+		
+		// determine if overwriting is being attempted
 		if (!$overwrite)
 		{
-			# rename the file if it already exists
+			// Overwrite the file if it already exists
 			$existing = scandir($this->_destination);
-			if (in_array($nospaces, $existing))
+			if (in_array($existing))
 			{
-				$dot = strrpos($nospaces, '.');
-				if ($dot)
-				{
-					$base = substr($nospaces, 0, $dot);
-					$extension = substr($nospaces, $dot);
-				}
-				else
-				{
-					$base = $nospaces;
-					$extension = '';
-				}
-				$i = 1;
-				do
-				{
-					$nospaces = $base . '_' . $i++ . $extension;
-				}
-				while (in_array($nospaces, $existing));
 				$this->renamed = true;
 			}
 		}
-		# returns the file name without spaces
-		return $nospaces;
+		// Return the new name to the uploaded PDF.
+		return $newname;
 	}
-	
-	
-// ------------------------------------------------------------------
-// end of Upload class
-}
+
+}// End of Upload_proc_pdf class

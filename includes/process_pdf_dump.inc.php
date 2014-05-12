@@ -7,7 +7,7 @@
 $args = escapeshellargs($user_file_for_upload);
 try
 {
-	$source = system("pdftk user_pdf.pdf dump_data_utf8 output source.txt", 
+	$source = system("pdftk source.pdf dump_data_utf8 output source.txt", 
 	$complete;
 }
 catch

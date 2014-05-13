@@ -1,15 +1,15 @@
 <?php 
+
+// Verify the processed file exists.
 if (file_exists('./processed/source.txt'))
 {
 	require_once('./includes/process_pdf_fields.inc.php');
-	$go_ahead = true;
 }
 else
 {
-	$errors = array();
-	$go_ahead = false;
+	echo "<p>Processed file does not exist.<br>
+		Try uploading again.</p>";
 }
-
 
 ?>
 
@@ -23,15 +23,7 @@ else
 <body>
 	<div id="page">
 		<!--// PDF field names and field values: //-->
-		<?php
-		if ($go_ahead)
-		{
-			create_articles($pdf_data);
-		}
-
-		 
-
-		?>
+		<?php create_articles($pdf_data); ?>
 	</div>
 </body>
 </html>

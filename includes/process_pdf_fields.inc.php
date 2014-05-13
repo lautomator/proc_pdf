@@ -47,6 +47,14 @@ foreach($field_value as $fv)
 	array_push($f_values, $tmp);
 }	
 
+// Verify that these are not empty; ie., if a user uploaded
+// a PDF without any form data, or the wrong kind of PDF.
+if (empty($f_names) || empty($f_values))
+{
+	echo "<p>The uploaded PDF must have fillable fields.</p>";
+	exit;
+}
+
 /*	Combine the arrays: the f_names will be
 	keys and the f_values will be the values. */
 $pdf_data = array_combine($f_names, $f_values);

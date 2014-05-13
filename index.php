@@ -76,9 +76,7 @@ if (isset($_POST['process']))
 				foreach ($result as $message)
 				{
 					echo "<p><em>$message</em></p>";
-				}?>
-		</form>		
-				<?php
+				}
 				/* 	If the file has been moved to the upload
 					directory and renamed, then it has passed all 
 					of the security checks; we are now ready to 
@@ -86,19 +84,16 @@ if (isset($_POST['process']))
 				if ($next)
 				{?>
 				<p class="hrule"></p>
-				<form action="" method="post"
-					id="processPDF">
-					<p>
-						<label><strong>Process PDF</strong></label><br><br>
-						<input type="submit" name="process" id="process" 
-							value="Process">
-					</p>
-				</form>
+				<p>
+					<label><strong>Process PDF</strong></label><br><br>
+					<input type="submit" name="process" id="process" 
+						value="Process">
+				</p>
 				<?php
 				}
 			}
 			?>
-		
+		</form>		
 	</div>
 </body>
 </html>

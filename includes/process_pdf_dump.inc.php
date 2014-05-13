@@ -1,22 +1,16 @@
 <?php
 
-/* 	Dump the data from the uploaded PDF 
-	into a text file using using PDFtk. */
-
-// Sanitize the input.
-$args = escapeshellargs($user_file_for_upload);
-try
-{
-	$source = system("pdftk source.pdf dump_data_utf8 output source.txt", 
-	$complete;
-}
-catch
-{
-	
-}
-
-if (isset($complete))
-{
-	echo $complete . '<br>';
-}
+/* 	Dump the data from the uploaded PDF into a text file using using PDFtk. 
+	See: http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
+	for more information. This must be installed on the server. 	
 */
+
+// The source file:
+$proc_source = './uploads/source.pdf';
+
+// Sanitize the input; as a precaution.
+$command = escapeshellcmd("pdftk $proc_source dump_data_fields_utf8 
+	output ./processed/source.txt");
+
+
+

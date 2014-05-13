@@ -1,5 +1,5 @@
 <?php 
-if (file_exists('./processed/test.txt'))
+if (file_exists('./processed/source.txt'))
 {
 	require_once('./includes/process_pdf_fields.inc.php');
 	$go_ahead = true;

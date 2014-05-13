@@ -43,6 +43,7 @@ class Upload_proc_pdf
 			$this->processFile($field['name'], $field['error'], $field['size'], 
 				$field['type'], $field['tmp_name'], $overwrite);
 		}
+		return true;
 
 	}
 	
@@ -95,6 +96,17 @@ class Upload_proc_pdf
 		}
 		// cast _max as an integer
 		$this->_max = (int) $num;
+	}
+
+	// Verify the success or failure of an upload.
+	public function verifyUpload()
+	{
+		// If the file has been renamed, we can assume a 
+		// succsessfull upload has taken place.
+		if ($this->_renamed)
+		{
+			return true;
+		}
 	}
 
 	// Process the file upload.

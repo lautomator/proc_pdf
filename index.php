@@ -21,6 +21,7 @@ if (isset($_POST['upload']))
 		$upload->setPermittedTypes('application/pdf');
 		$upload->move(true);
 		$result = $upload->getMessages();
+		$next = $upload->verifyUpload();
 	}
 	catch (Exception $e)
 	{
@@ -29,12 +30,25 @@ if (isset($_POST['upload']))
 }
 
 // Process the uploaded PDF.
-/*if (isset($_POST['process']))
+if (isset($_POST['process']))
 {
 	// Dump the PDF data to a text file.
 	require_once('./includes/process_pdf_dump.inc.php');
+
+	//	Execute the data fields dump using PDFtk
+	try
+	{
+		$proc_pdf = system($command, $results);
+	}
+	catch (Exception $e)
+	{
+		echo "<p>This is not the correct type of PDF.<br>
+			PDF must have \"fillable\" fields.</p>";
+	}
+	// Go to results page.
+	header("Location: ./proc_pdf_results.php");
 }
-*/
+
 ?>
 
 <!DOCTYPE html>
@@ -62,30 +76,29 @@ if (isset($_POST['upload']))
 				foreach ($result as $message)
 				{
 					echo "<p><em>$message</em></p>";
-				}
+				}?>
+		</form>		
+				<?php
 				/* 	If the file has been moved to the upload
-					directory, then it has passed all of the
-					security checks; we are now ready to proceed
-					with the prompt to process the PDF. */			
-				?>
+					directory and renamed, then it has passed all 
+					of the security checks; we are now ready to 
+					proceed with the prompt to process the PDF. */			
+				if ($next)
+				{?>
 				<p class="hrule"></p>
-				<p>
-					<label><strong>Process PDF</strong></label><br><br>
-					<input type="submit" name="process" id="process" 
-						value="Process">
-				</p>				
-			<?php
+				<form action="" method="post"
+					id="processPDF">
+					<p>
+						<label><strong>Process PDF</strong></label><br><br>
+						<input type="submit" name="process" id="process" 
+							value="Process">
+					</p>
+				</form>
+				<?php
+				}
 			}
 			?>
-		</form>
+		
 	</div>
 </body>
 </html>
-<!--//
-				<p class="hrule"></p>
-				<p>
-					<label><strong>Process PDF</strong></label><br><br>
-					<input type="submit" name="process" id="process" 
-						value="Process">
-				</p>
-	//-->

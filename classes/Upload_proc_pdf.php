@@ -189,7 +189,7 @@ class Upload_proc_pdf
 	{
 		switch ($error)
 		{
-			// upload succesfull
+			// upload succesful
 			case 0:
 				return true;
 			// file is larger than amount allowed
@@ -205,6 +205,7 @@ class Upload_proc_pdf
 			// no specified file submitted
 			case 4:
 				$this->_messages[] = 'No file selected.';
+				break;
 			// default error covers 6 - 8; no reason to delineate them here
 			// as these are sysadmin type errors; for example: no upload directory
 			default:

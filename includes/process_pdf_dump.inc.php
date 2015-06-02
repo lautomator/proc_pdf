@@ -8,7 +8,7 @@
 // The source file:
 $proc_source = './uploads/source.pdf';
 
-// Sanitize the input; as a precaution.
+// Sanitize the input.
 $command = escapeshellcmd(
     "pdftk $proc_source dump_data_fields_utf8 output ./processed/source.txt"
 );

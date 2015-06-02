@@ -63,8 +63,7 @@ if (empty($f_names) || empty($f_values)) {
     keys and the f_values will be the values. */
 $pdf_data = array_combine($f_names, $f_values);
 
-function create_articles($pdf_data)
-{
+function create_articles($pdf_data) {
 
     //  Traverse the keys and print the corresponding keys and values.
     while ($key = key($pdf_data)) {

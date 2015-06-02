@@ -24,6 +24,8 @@ if (file_exists('./processed/source.txt')) {
     <div id="page">
         <!--// PDF field names and field values: //-->
         <?php create_articles($pdf_data); ?>
+
+        <p><a href="index.php">process another file</a></p>
     </div>
 </body>
 </html>
